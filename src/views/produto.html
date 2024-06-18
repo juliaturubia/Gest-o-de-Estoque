@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--evitar ataques de Cross Site Scripting (injeção de dados)-->
+  <link rel="stylesheet" href="../public/css/style.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+  <title>Cadastro de Cliente</title>
+
+</head>
+
+<body class="bg-light">
+  <h1 class="text-center text-dark mt-3">Produtos</h1>
+  <form id="formCadastros" class="row g-3 p-4">
+    <div class="col-6 d-flex mt-3">
+      <input type="text" class="form-control col-12" id="inputProduct" placeholder="barcode" spellcheck="false">
+      <button type="button" class="btn btn-dark ms-3" id="btnRead" onclick="pesquisarProduto()">Buscar</button>
+      <br>
+    </div>
+
+    <!-- 
+    <div class="col-6 d-flex mt-3">
+
+    </div> -->
+
+    <hr class="border border-primary border-1 opacity-75">
+
+
+    <div class="col-6">
+      <input type="text" class="form-control" id="idClient" placeholder="ID" maxlength="30">
+      <label for="idProduct" class="form-label" placeholder=""></label>
+        <input type="text" class="form-control text-center" id="idProduct" placeholder="id do produto">
+      </div>
+    <div class="container-fluid d-flex">
+
+      <div class="col-6">
+
+        
+
+        
+          <div class="col-12 mt-3">
+            <input type="text" placeholder="Codigo de Barra" id="formCodigo" class="form-control text-center"
+              spellcheck="false">
+          </div>
+
+          <div class="col-12 mt-3">
+            <input type="text" placeholder="Nome do Produto" id="formProduto" class="form-control text-center"
+              spellcheck="false">
+          </div>
+        
+          <div class="col-12 mt-3">
+            <input type="text" placeholder="Fornecedor" id="formFornecedor" class="form-control text-center"
+              spellcheck="false">
+          </div>
+        
+          <div class="col-12 mt-3"><input type="number" placeholder="Quantidade Em Estoque" id="formEstoque"
+              class="form-control text-center " spellcheck="false"></div>
+        <div class="col-12 row ms-1 mt-3"><input type="number" placeholder="Valor Do Produto R$" id="formValor" maxlength="9"
+            class="form-control text-center" spellcheck="false"></div>
+
+      </div>
+      <div class="col-6 d-flex align-items-center justify-content-center flex-column">
+        <!-- exibir imagem do produto-->
+        <div class="col-5">
+          <img id="imagemProdutoPreview" src="../public/img/camera.png" alt="" class="img-fluid">
+        </div>
+        <!-- upload da imagem via explorador de arquivos -->
+        <input type="file" id="imagemProduto" class="botaoImagem">
+      </div>
+    </div>
+
+
+
+    <div class="col-12">
+      <input type="submit" value="Salvar" class="mt-4 btn btn-outline-success col-3 ms-3" id="btnSalvar">
+
+
+      <button type="button" class="btn btn-outline-warning mt-4 ms-3 col-3" id="btnUpdate" onclick="editarProduto()">
+        Editar </button>
+
+      <button type="button" onclick="excluirProduto()" class="btn btn-outline-danger mt-4 ms-3 col-3" id="btnDelete">
+        Excluir </button>
+
+      <button type="reset" class="btn" id="btnReset" onclick="clean()"></button>
+  </form>
+
+
+  </div>
+  <!--</main>--->
+
+  <script src="../public/js/janela5Produtos/renderer.js"></script>
+  <script src="../views/script.js"></script>
+  <script src="../public/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
