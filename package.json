@@ -6,11 +6,11 @@
   },
   "name": "cadastro",
   "version": "1.0.0",
-  "description": "Sistema de Cadastro de Clientes",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "Andres e Edinaldo",
+  "author": "",
   "license": "MIT"
 }
